@@ -1,0 +1,113 @@
+@import url("../../.cache/wal/colors-waybar-transp.css");
+@import url("../../.cache/wal/colors-waybar.css");
+
+* {
+    font-family: "Press Start 2P";
+    font-size: 9px;
+    min-height: 0;
+    border-radius: 0;
+    margin: 0;
+}
+
+window#waybar {
+    background: @background;
+}
+
+
+/*-----module groups----*/
+.modules-right {
+color: @color7;
+font-size: 10px;
+}
+.modules-center {
+color: @color7;
+}
+.modules-left {
+}
+
+
+#workspaces button {
+    padding: 6px;
+    background: transparent;
+    color: @color4;
+    border-bottom: 3px solid transparent;
+}
+
+
+#workspaces button.active {
+background:@color1;    
+color: black;
+margin: 0;
+padding-top: 8px;
+padding-bottom: 4px;
+padding-right: 6px;
+padding-left: 6px;
+}
+
+#tray menu {
+    background-color: @colortransp1; 
+}
+
+
+#pulseaudio-slider {
+margin: 0;
+padding: 0;
+padding-left: 10px;
+border: none;
+/*border-left: 2px solid;*/
+}
+
+#pulseaudio-slider slider {
+min-height: 0px;
+border-radius: 50%;
+min-width: 0px;
+opacity: 0;
+background-image: none;
+border: none;
+box-shadow: none;
+}
+
+#pulseaudio-slider trough {
+min-height: 9px;
+min-width: 80px;
+border-radius: 5px;
+background-color: black;
+margin: 0;
+padding: 0;
+}
+
+#pulseaudio-slider highlight {
+min-width: 9px;
+border-radius: 5px;
+background-color: white;
+margin: 0;
+padding: 0;
+}
+
+#pulseaudio {
+padding-right: 3px;
+padding-left: 8px;
+/*border-right: 2px solid ;*/
+}
+
+#memory, #tray {
+padding-right: 8px;
+padding-left: 8px;
+/*border-right: 2px solid;*/
+}
+
+#cpu{
+    padding-left: 8px;
+}
+
+#clock{
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.custom-spotify {
+    padding: 0 10px;
+    margin-right: 6px;
+    background-color: rgba(29, 185, 84, 0.8);
+    color: black;
+}

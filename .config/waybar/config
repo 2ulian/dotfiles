@@ -1,0 +1,108 @@
+// -*- mode: jsonc -*-
+{
+    // "layer": "top", // Waybar at top layer
+    // "position": "bottom", // Waybar position (top|bottom|left|right)
+    //"height": 30, // Waybar height (to be removed for auto height)
+    // "width": 1280, // Waybar width
+    "spacing": 0, // Gaps between modules (4px)
+    // Choose the order of the modules
+    "modules-left": [
+        "hyprland/workspaces"
+    ],
+    "modules-center": [
+    	"custom/open",
+        "hyprland/window",
+    	"custom/close",
+    ],
+    "modules-right": [
+        "custom/spotify",
+    	"custom/open",
+        "pulseaudio/slider",
+        "pulseaudio",
+    	"custom/close",
+    	"custom/open",
+        "cpu",
+    	"custom/close",
+    	"custom/open",
+        "memory",
+    	"custom/close",
+    	"custom/open",
+        "tray",
+    	"custom/close",
+    	"custom/open",
+        "clock",
+    	"custom/closeclock",
+    ],
+
+
+
+
+    //     Modules configuration
+
+
+
+
+     "hyprland/workspaces": {
+         "disable-scroll": true,
+         "all-outputs": false,
+         "warp-on-scroll": false,
+     },
+     "hyprland/window": {
+         "separate-outputs": true,
+     },
+    "tray": {
+        "icon-size": 18,
+        "spacing": 9,
+        "reverse-direction": true
+    },
+    "clock": {
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"
+    },
+    "cpu": {
+        "format": "{usage}% <span font='13px'> </span>",
+        "tooltip": false
+    },
+    "memory": {
+        "format": "{}% <span font='13px'> </span>",
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{volume}% {icon} ",
+
+        "format-icons": {
+            "default": [
+                "<span font='13px'></span>",
+                "<span font='13px'></span>",
+                "<span font='13px'></span>",
+            ]
+        },
+        "on-click": "pavucontrol"
+    },
+        "pulseaudio/slider": {
+            "min": 0,
+            "max": 100,
+            "orientation": "horizontal"
+        },
+
+
+        "custom/spotify": {
+            "exec": "/usr/bin/python3 /home/fellwin/.config/waybar/mediaplayer.py --player spotify",
+            "format": "{}] <span font='15px'> </span>",
+            "return-type": "json",
+            "on-click": "playerctl -p spotify play-pause",
+            "on-click-right": "playerctl -p spotify next",
+        },
+
+	"custom/open": {
+		"format": "["
+	},
+
+	"custom/close": {
+		"format": "] "
+	},
+
+	"custom/closeclock": {
+		"format": "] "
+	},
+}

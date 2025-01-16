@@ -1,0 +1,63 @@
+@import ".cache/wal/colors-waybar.css";
+@import ".cache/wal/colors-waybar-transp.css";
+
+
+* {
+    font-family: "Press Start 2P";
+    font-size: 10px;
+}
+
+#window {
+	background-color: @background;
+}
+
+#outer-box {
+	padding: 10px;
+}
+
+#input {
+	background-color: @colortransp4;
+	border: 1px solid @color6;
+	padding: 8px 12px;
+}
+
+#scroll {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#inner-box {
+}
+
+#img {
+	padding-right: 10px;
+}
+
+#text {
+	color: @color4;
+}
+
+
+#text:selected {
+	color: @color0;
+}
+
+#entry {
+	padding-right: 60px;
+}
+
+#entry:selected {
+	background: @color6;
+	color: @background;
+	padding:10px;
+}
+
+#unselected {
+}
+
+#selected {
+}
+
+#input, #entry:selected {
+	border-radius: 4px;
+}
