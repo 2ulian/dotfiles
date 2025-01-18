@@ -475,6 +475,7 @@
       ],
       "right": [
         "netstat",
+        "hyprsunset",
         "volume",
         "bluetooth",
         "systray",
@@ -516,5 +517,6 @@
   "theme.bar.buttons.padding_y": "0.3rem",
   "theme.bar.buttons.radius": "0em",
   "theme.bar.buttons.innerRadiusMultiplier": "0.9",
-  "theme.bar.layer": "top"
+  "theme.bar.layer": "top",
+  "bar.customModules.hyprsunset.temperature": "3000k"
 }

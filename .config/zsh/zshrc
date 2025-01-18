@@ -17,8 +17,6 @@ zstyle :compinstall filename '/home/fellwin/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
-#
-#
 
 source ~/.config/zsh/aliasrc
 source ~/.config/zsh/optionrc
@@ -58,3 +56,13 @@ if [[ -r ~/.p10k.zsh ]]; then
     source ~/.p10k.zsh
 fi
 
+# shell wrapper for yazi
+
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
