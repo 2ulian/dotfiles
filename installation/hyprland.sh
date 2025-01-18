@@ -1,7 +1,7 @@
 #!/bin/bash
 
-#installation de pywal et police
-yay -S --noconfirm --needed python-pywal16 python-pywalfox pywal-spicetify ttf-press-start-2p
+#installation de pywal et police et theme
+yay -S --noconfirm --needed python-pywal16 python-pywalfox pywal-spicetify ttf-press-start-2p material-gtk-theme-deepocean-git bibata-cursor-theme
 
 sudo pacman -S --needed ttf-hack-nerd papirus-icon-theme
 
