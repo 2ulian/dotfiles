@@ -6,7 +6,7 @@ yay -S --noconfirm --needed python-pywal16 python-pywalfox pywal-spicetify ttf-p
 sudo pacman -S --needed ttf-hack-nerd papirus-icon-theme
 
 #installation de hyprland:
-yay -S --noconfirm --needed hyprpicker-git waypaper hyprshade ags-hyprpanel-git hyprpolkitagent-git hyprsunset
+yay -S --noconfirm --needed hyprpicker-git waypaper hyprshade ags-hyprpanel-git hyprpolkitagent-git hyprsunset matugen-bin
 
 sudo pacman -S --needed swww wofi kitty hyprland
 
