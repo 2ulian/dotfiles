@@ -5,7 +5,7 @@
 sudo pacman -Syu
 
 #installation de yay
-sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si && cd .. && rm -r yay
+sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si && cd .. && sudo rm -r yay
 
 
 bash ~/dotfiles/installation/nvidia.sh
@@ -38,7 +38,8 @@ bash ~/dotfiles/installation/hyprland.sh
 #installer les microcode pour un system avec intel microcode, et pas de disque dur crypté:
 sudo sed -i '/^HOOKS=/c\HOOKS=(base udev autodetect microcode modconf keyboard keymap consolefont block filesystems fsck)' /etc/mkinitcpio.conf
 
-rm -r ~/dotfiles/installation
+cd
+sudo rm -r ~/dotfiles/installation
 stow ~/dotfiles
 
 sudo reboot
