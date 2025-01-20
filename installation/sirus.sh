@@ -31,7 +31,7 @@ sudo ufw enable
 sudo usermod -aG gamemode $(whoami)
 
 #create home directories:
-#xdg-user-dirs-update
+xdg-user-dirs-update
 
 bash ~/dotfiles/installation/hyprland.sh
 
