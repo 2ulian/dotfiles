@@ -9,8 +9,7 @@ cd
 
 sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si && cd
 
-
-./~/dotfiles/installation/nvidia.sh
+source ~/dotfiles/installation/nvidia.sh
 
 #installation application
 sudo pacman -S --needed firefox alacritty keepassxc libreoffice-still neovim obsidian pavucontrol spotify-launcher zsh firefox nwg-look vlc blueman yazi qbittorrent stow steam timeshift
@@ -35,7 +34,7 @@ sudo usermod -aG gamemode $(whoami)
 #create home directories:
 xdg-user-dirs-update
 
-./~/dotfiles/installation/hyprland.sh
+source ~/dotfiles/installation/hyprland.sh
 
 #installer les microcode pour un system avec intel microcode, et pas de disque dur crypté:
 sudo sed -i '/^HOOKS=/c\HOOKS=(base udev autodetect microcode modconf keyboard keymap consolefont block filesystems fsck)' /etc/mkinitcpio.conf
