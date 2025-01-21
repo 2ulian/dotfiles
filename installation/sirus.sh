@@ -5,10 +5,12 @@
 sudo pacman -Syu
 
 #installation de yay
-sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si && cd .. && sudo rm -r yay
+cd
+
+sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si && cd
 
 
-bash ~/dotfiles/installation/nvidia.sh
+./~/dotfiles/installation/nvidia.sh
 
 #installation application
 sudo pacman -S --needed firefox alacritty keepassxc libreoffice-still neovim obsidian pavucontrol spotify-launcher zsh firefox nwg-look vlc blueman yazi qbittorrent stow steam timeshift
@@ -33,12 +35,13 @@ sudo usermod -aG gamemode $(whoami)
 #create home directories:
 xdg-user-dirs-update
 
-bash ~/dotfiles/installation/hyprland.sh
+./~/dotfiles/installation/hyprland.sh
 
 #installer les microcode pour un system avec intel microcode, et pas de disque dur crypté:
 sudo sed -i '/^HOOKS=/c\HOOKS=(base udev autodetect microcode modconf keyboard keymap consolefont block filesystems fsck)' /etc/mkinitcpio.conf
 
 cd
+sudo rm -r yay
 sudo rm -r ~/dotfiles/installation
 stow ~/dotfiles
 
