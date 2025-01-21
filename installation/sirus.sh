@@ -43,6 +43,7 @@ sudo sed -i '/^HOOKS=/c\HOOKS=(base udev autodetect microcode modconf keyboard k
 cd
 sudo rm -r yay
 sudo rm -r ~/dotfiles/installation
+source ~/.zshrc
 stow ~/dotfiles
 
 sudo reboot
