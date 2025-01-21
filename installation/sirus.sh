@@ -14,7 +14,7 @@ source ~/dotfiles/installation/nvidia.sh
 #installation application
 sudo pacman -S --needed firefox alacritty keepassxc libreoffice-still neovim obsidian pavucontrol spotify-launcher zsh firefox nwg-look vlc blueman yazi qbittorrent stow steam timeshift
 
-yay -S --noconfirm --needed stremio vesktop-bin anki visual-studio-code-bin
+yay -S --noconfirm --needed stremio vesktop-bin visual-studio-code-bin
 
 #installation daemon(vérifier qu'ils sont bien activés)
 sudo pacman -S --needed pipewire-pulse pipewire wireplumber syncthing ufw man xdg-user-dirs intel-ucode bluez gamemode lib32-gamemode
